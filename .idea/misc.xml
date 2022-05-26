@@ -3,7 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/activity_main.xml" value="0.1661600810536981" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2115" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_delete.xml" value="0.3565" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2115" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_login.xml" value="0.3565" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_logoff.xml" value="0.2115" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_menu_camera.xml" value="0.3565" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.3565" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.3565" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_register.xml" value="0.2115" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/side_nav_bar.xml" value="0.3565" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/activity_main.xml" value="0.6382592928377153" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/content_principal.xml" value="0.24166666666666667" />
       </map>
     </option>
   </component>
