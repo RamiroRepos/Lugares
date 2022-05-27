@@ -3,7 +3,6 @@ package com.lugares
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.system.Os
 import android.widget.Toast
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
@@ -33,8 +32,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.btRegister.setOnClickListener { haceRegistro() }
         binding.btLogin.setOnClickListener { haceLogin() }
-
-        setContentView(R.layout.activity_main)
 
     }
 
