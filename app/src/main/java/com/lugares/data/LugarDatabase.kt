@@ -9,7 +9,7 @@ import com.lugares.model.Lugar
 abstract class LugarDatabase : RoomDatabase() {
     abstract fun lugarDao(): LugarDao
 
-    companion object {
+    companion object { //Lo que se encuentra dentro se puede llamar desde otra clase, tipo Static
 
         @Volatile
         private var INSTANCE: LugarDatabase? = null
