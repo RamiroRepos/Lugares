@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val email = binding.etCorreo.text.toString()
         val clave = binding.etClave.text.toString()
 
-        //Se usa la función para crear un usuario por medio de correo y contraseña
+        //Se usa la función para crear un iniciar sesion por medio de correo y contraseña
         auth.signInWithEmailAndPassword(email, clave)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -83,6 +83,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Principal::class.java)
             startActivity(intent)
         }
+    }
+
+    //Verifica si el usuario se encuentra autenticado y si es asi pasa a la siguiente vista sin pedir autenticacion
+    public override fun onStart() {
+        super.onStart()
+        //obtenemos el usuario actual.. si existe..
+        val usuario = auth.currentUser
+        actualiza(usuario)
     }
 
 }

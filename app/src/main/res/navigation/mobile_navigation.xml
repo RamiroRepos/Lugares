@@ -32,8 +32,8 @@
     <fragment
         android:id="@+id/addLugarFragment"
         android:name="com.lugares.ui.lugar.AddLugarFragment"
-        android:label="fragment_add_lugar"
-        tools:layout="@layout/fragment_add_lugar" >
+        android:label="@string/btn_agregar"
+        tools:layout="@layout/fragment_add_lugar">
         <action
             android:id="@+id/action_addLugarFragment_to_nav_lugar2"
             app:destination="@id/nav_lugar" />
@@ -41,8 +41,8 @@
     <fragment
         android:id="@+id/updateLugarFragment"
         android:name="com.lugares.ui.lugar.UpdateLugarFragment"
-        android:label="fragment_update_lugar"
-        tools:layout="@layout/fragment_update_lugar" >
+        android:label="@string/btn_actualizar"
+        tools:layout="@layout/fragment_update_lugar">
         <action
             android:id="@+id/action_updateLugarFragment_to_nav_lugar"
             app:destination="@id/nav_lugar" />

@@ -3,7 +3,6 @@ package com.lugares
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -34,11 +33,7 @@ class Principal : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_principal)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_lugar, R.id.nav_gallery, R.id.nav_slideshow
-            ), drawerLayout
-        )
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_lugar, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
