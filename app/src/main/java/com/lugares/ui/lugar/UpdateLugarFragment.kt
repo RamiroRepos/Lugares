@@ -160,7 +160,7 @@ class UpdateLugarFragment : Fragment() {
 
         if (nombre.isNotEmpty()) {
             val lugar = Lugar(args.lugar.id, nombre, correo, telefono, web, 0.0, 0.0, 0.0, "", "")
-            lugarViewModel.updateLugar(lugar)
+            lugarViewModel.saveLugar(lugar)
             Toast.makeText(
                 requireContext(),
                 getString(R.string.msg_lugar_actualizado),

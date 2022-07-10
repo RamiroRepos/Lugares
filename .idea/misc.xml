@@ -13,17 +13,20 @@
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.3565" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/ic_register.xml" value="0.2115" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/drawable/side_nav_bar.xml" value="0.3565" />
-        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/activity_principal.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/app_bar_principal.xml" value="0.33" />
-        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/content_principal.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/activity_principal.xml" value="0.1" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/app_bar_principal.xml" value="0.1" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/content_principal.xml" value="0.1" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/fragment_add_lugar.xml" value="0.33" />
-        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/fragment_lugar.xml" value="0.33" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/fragment_gallery.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/fragment_lugar.xml" value="0.22" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/fragment_slideshow.xml" value="0.10555555555555556" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/fragment_update_lugar.xml" value="0.25" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/lugar_fila.xml" value="0.33" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/layout/nav_header_principal.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/menu/activity_main_drawer.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/menu/delete_menu.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/menu/principal.xml" value="0.33" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/menu/principal.xml" value="0.22" />
       </map>
     </option>
   </component>
