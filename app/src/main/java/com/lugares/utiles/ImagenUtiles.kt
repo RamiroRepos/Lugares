@@ -13,7 +13,6 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.core.content.FileProvider
 import com.lugares.BuildConfig
 import java.io.File
-import kotlin.math.log
 
 class ImagenUtiles (
     private val contexto: Context,
@@ -23,20 +22,23 @@ class ImagenUtiles (
     private val imagen: ImageView,
     private var tomarFotoActivity: ActivityResultLauncher<Intent>
 ) {
+    private var fotoTomada: Boolean = false
     init {
         btPhoto.setOnClickListener { tomarFoto() }
-        btRotaL.setOnClickListener { imagen.rotation=imagen.rotation-90f }
-        btRotaR.setOnClickListener { imagen.rotation=imagen.rotation+90f }
+        btRotaL.setOnClickListener { imagen.rotation = imagen.rotation - 90f }
+        btRotaR.setOnClickListener { imagen.rotation = imagen.rotation + 90f }
     }
 
     lateinit var imagenFile: File
+
     private lateinit var currentPhotoPath: String
 
     @SuppressLint("QueryPermissionsNeeded")
     private fun tomarFoto() {
-
+        Log.d("ImagenU tomarFoto", "ImagenU tomarFoto")
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         if (intent.resolveActivity(contexto.packageManager) != null) {
+            Log.d("ImagenU tomarFoto", "ImagenU tomarFoto dentro del iff")
             imagenFile = createImageFile()
             val photoURI = FileProvider.getUriForFile(
                 contexto,
@@ -48,13 +50,14 @@ class ImagenUtiles (
     }
 
     private fun createImageFile(): File {
-        val archivo=OtrosUtiles.getTempFile("imagen_")
+        val archivo = OtrosUtiles.getTempFile("imagen_")
         val storageDir: File? =
             contexto.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-        val image= File.createTempFile(
+        val image = File.createTempFile(
             archivo,       /* prefijo */
             ".jpg",  /* extensión */
-            storageDir    /* directorio */)
+            storageDir    /* directorio */
+        )
         currentPhotoPath = image.absolutePath
         return image
     }
@@ -62,13 +65,10 @@ class ImagenUtiles (
     fun actualizaFoto() {
         imagen.setImageBitmap(
             BitmapFactory.decodeFile(imagenFile.absolutePath))
+        fotoTomada = true
+    }
+
+    fun getFotoTomada(): Boolean {
+        return fotoTomada
     }
 }
-
-
-
-
-
-
-
-

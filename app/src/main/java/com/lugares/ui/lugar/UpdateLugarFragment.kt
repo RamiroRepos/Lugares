@@ -16,6 +16,8 @@ import com.lugares.model.Lugar
 import com.lugares.viewmodel.LugarViewModel
 import android.Manifest
 import android.content.pm.PackageManager
+import android.media.MediaPlayer
+import com.bumptech.glide.Glide
 
 class UpdateLugarFragment : Fragment() {
 
@@ -24,6 +26,8 @@ class UpdateLugarFragment : Fragment() {
     private lateinit var lugarViewModel: LugarViewModel
     private var _binding: FragmentUpdateLugarBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,8 +50,27 @@ class UpdateLugarFragment : Fragment() {
         binding.btnActualizar.setOnClickListener { updateLugar() }
 
         binding.btEmail.setOnClickListener { escribirCorreo() }
-        binding.btPhone.setOnClickListener{llamarLugar()}
-        binding.btWeb.setOnClickListener{verWeb()}/*
+        binding.btPhone.setOnClickListener { llamarLugar() }
+        binding.btWeb.setOnClickListener { verWeb() }
+
+        //Para inicializar y activar el boton de play... si hay ruta de audio
+        if (args.lugar.rutaAudio?.isNotEmpty() == true) {
+            mediaPlayer = MediaPlayer()
+            mediaPlayer.setDataSource(args.lugar.rutaAudio)
+            mediaPlayer.prepare()
+            binding.btPlay.isEnabled = true
+            binding.btPlay.setOnClickListener { mediaPlayer.start() }
+        } else {
+            binding.btPlay.isEnabled = false
+        }
+
+        //Si  hay ruta de imagen la dibujo
+        if (args.lugar.rutaImagen?.isNotEmpty() == true) {
+            Glide.with(requireContext()).load(args.lugar.rutaImagen).fitCenter()
+                .into(binding.imagen)
+        }
+
+        /*
         binding.btWhatsapp.setOnClickListener{enviarWhatsApp()}
 
         binding.btLocation.setOnClickListener{verMapa()}*/
@@ -71,7 +94,7 @@ class UpdateLugarFragment : Fragment() {
         } else {
             Toast.makeText(
                 requireContext(),
-                getString(R.string.msg_datos),Toast.LENGTH_SHORT
+                getString(R.string.msg_datos), Toast.LENGTH_SHORT
             ).show()
         }
     }
@@ -84,11 +107,11 @@ class UpdateLugarFragment : Fragment() {
             //Se activa el correo
             val rutina = Intent(Intent.ACTION_CALL)
             rutina.data = Uri.parse("tel:$recurso")
-            if (requireActivity().checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+            if (requireActivity().checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 
                 //Se solicitan los permisos porque no estan otorgados
                 requireActivity().requestPermissions(arrayOf(Manifest.permission.CALL_PHONE), 105)
-            }else{ //Se tienen los permisos para llamar
+            } else { //Se tienen los permisos para llamar
                 requireActivity().startActivity(rutina) //Hacer la llamada
             }
         } else {
@@ -104,9 +127,12 @@ class UpdateLugarFragment : Fragment() {
         if (recurso.isNotEmpty()) {
             //Se activa el correo
             val rutina = Intent(Intent.ACTION_SEND)
-            rutina.type="message/rfc822"
+            rutina.type = "message/rfc822"
             rutina.putExtra(Intent.EXTRA_EMAIL, arrayOf(recurso))
-            rutina.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.msg_saludos)+" "+binding.etNombre.text)
+            rutina.putExtra(
+                Intent.EXTRA_SUBJECT,
+                getString(R.string.msg_saludos) + " " + binding.etNombre.text
+            )
             rutina.putExtra(Intent.EXTRA_TEXT, getString(R.string.msg_mensaje_correo))
             startActivity(rutina)
         } else {
