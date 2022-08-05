@@ -48,8 +48,8 @@ class GalleryFragment : Fragment(), OnMapReadyCallback {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        lugarViewModel =
+            ViewModelProvider(this).get(LugarViewModel::class.java)
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -103,7 +103,7 @@ class GalleryFragment : Fragment(), OnMapReadyCallback {
                 .addOnSuccessListener { location: Location? ->
                     if (location != null) { //Se pudo leer las coordenadas gps...
                         val camaraUpdate = CameraUpdateFactory.newLatLngZoom(
-                            LatLng(location.latitude, location.longitude), 15f
+                            LatLng(location.latitude, location.longitude), 10f
                         )
                         googleMap.animateCamera(camaraUpdate)
                     }
@@ -117,6 +117,8 @@ class GalleryFragment : Fragment(), OnMapReadyCallback {
                 if (lugar.latitud?.isFinite() == true && lugar.longitud?.isFinite() == true) {
                     val marca = LatLng(lugar.latitud, lugar.longitud)
                     googleMap.addMarker(MarkerOptions().position(marca).title(lugar.nombre))
+                    //googleMap.addMarker(MarkerOptions().position(marca).)
+
                 }
             }
         }
