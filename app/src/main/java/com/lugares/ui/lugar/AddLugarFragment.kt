@@ -58,8 +58,6 @@ class AddLugarFragment : Fragment() {
             binding.msgMensaje.text = getString(R.string.msg_subiendo_audio)
             binding.msgMensaje.visibility = TextView.VISIBLE
             subeAudio()
-
-
         }
 
         audioUtiles = AudioUtiles(
@@ -148,8 +146,6 @@ class AddLugarFragment : Fragment() {
         } else {
             subeImagen("")
         }
-
-
     }
 
     private fun subeImagen(rutaAudio: String) {

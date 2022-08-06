@@ -29,10 +29,19 @@
         <entry key="..\:/Users/Luisk/Documents/Movil/Lugares/app/src/main/res/menu/principal.xml" value="0.22" />
         <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/drawable-v24/ic_delete.xml" value="0.2985" />
         <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/activity_main.xml" value="0.2546875" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/activity_principal.xml" value="0.3625" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/app_bar_principal.xml" value="0.3625" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/content_principal.xml" value="0.3625" />
         <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/fragment_add_lugar.xml" value="0.33" />
         <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/fragment_lugar.xml" value="0.3625" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/fragment_slideshow.xml" value="0.3625" />
         <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/fragment_update_lugar.xml" value="0.33" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/lugar_fila.xml" value="0.3625" />
         <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/layout/nav_header_principal.xml" value="0.25" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/menu/activity_main_drawer.xml" value="0.3625" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/menu/delete_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/luis9/Documents/Progra Movil/Lugares/app/src/main/res/menu/principal.xml" value="0.3625" />
       </map>
     </option>
   </component>
